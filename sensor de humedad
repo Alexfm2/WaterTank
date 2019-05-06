@@ -1,25 +1,14 @@
 void setup() {
   // inicializa uart a 9600 bauds por segundos:
-  
   Serial.begin(9600);
-  pinMode(2, OUTPUT); 
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT); 
-
 }
 
 void loop() {
   //  Lee la entrada anaógica en el pin 1.
  
   int sensorValue = analogRead(A1);
-
-  // Set the initial state of the LEDs to OFF
-  digitalWrite(2, LOW);
-  digitalWrite(3, LOW);
-  digitalWrite(4, LOW);
   
-  
-
   Serial.print("La humendad del tanque es: ");
   Serial.println(sensorValue);
   delay(500);        // Retardo entre mediciones
+ }
